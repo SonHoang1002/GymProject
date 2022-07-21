@@ -1,0 +1,66 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+  }
+
+body {
+    background-image: url(../images/nutrition.jpg);
+    background-size: cover;
+}
+
+.nav-tabs {
+    background: #aaa;
+    border: 0ch;
+    border-color: #aaa;
+}
+
+.nav-link, .dropdown-toggle{
+    color: #aaa;
+    border: white 0px;
+}
+
+.nav-link, .dropdown-toggle:hover {
+    color: #aaa;
+    border: white 0px;
+}
+
+.nav .usr_name {
+    color: antiquewhite;
+}
+
+.nav .title {
+    color: #f00;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.container {
+    margin-top: 10px;
+    margin-left: 150px;
+}
+
+.container h1{
+    font-size: x-large;
+    text-align: center;
+}
+
+.container .col {
+    box-sizing: border-box;
+}
+.rate {
+    color: #f00;
+    font-size: 2rem;
+}
+.card .data {
+    color: #f00;
+    font-weight: bold;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <link rel="stylesheet" href="../css/admin_style.css">
+</head>
+<body id="body-pd">
+    <div id="hlv" class="height-100 bg-light">
+        <div class="container1">
+            <div class="title">Tạo hồ sơ HLV mới</div>
+            <form action="/addHLV" method="post">
+                <div class="user_details">
+                    <div class="inputbox">
+                        <span class="details">Họ và tên</span>
+                        <input type="text" name="hlvname" placeholder="Nhập họ tên của HLV " id="hlvname" required>
+                     </div>
+    
+                     <div class="inputbox">
+                        <span class="details">Kinh nghiệm huấn luyện </span>
+                        <input type="text" name="hlvexp" placeholder="Kinh nghiệm huấn luyện" id="hlvexp" required>
+                     </div>
+    
+                     <div class="inputbox">
+                        <span class="details">Chứng chỉ </span>
+                        <input type="text" name= "hlvcerti" placeholder="Các chứng chỉ liên quan đến huấn luyện" id="hlvcerti" required>
+                     </div>
+                     <div class="inputbox">
+                        <span class="details">Email </span>
+                        <input type="text" name="hlvemail" id="hlvemail" placeholder="Email của HLV " required>
+                     </div>
+    
+                     <div class="inputbox">
+                        <span class="details">Số điện thoại </span>
+                        <input type="text" name="hlvphone" id="hlvphone" placeholder="Số điện thoại HLV " required>
+                     </div>
+    
+                     <div class="inputbox">
+                        <span class="details">Link Facebook</span>
+                        <input type="text" name="linkFB" id="linkFB" placeholder="Link Facebook trang cá nhân của HLV " required>
+                     </div>
+    
+                </div>
+                <div class="button">
+                    <input type="submit" value="Thêm HLV">
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <div id="baitap" class="height-100 bg-light">
+        <div class="container2">
+            <div class="title">Tạo bài tập mới</div>
+            <form action="/addBT" method="post">
+                <div class="user_details">
+                    <div class="inputbox">
+                        <span class="details">Tên của bài tập</span>
+                        <input type="text" name="Btname" placeholder="Nhập tên của bài tập " id="Btname" required>
+                     </div>
+    
+                     <div class="inputbox">
+                        <span class="details">Mức độ (Dễ : 1; Trung bình : 2; Khó : 3)</span>
+                        <input type="text" name="Btlevel" placeholder="Điền số tương ứng" id="Btlevel" required>
+                     </div>
+    
+                     <div class="inputbox">
+                        <span class="details">Mục đích bài tập (Thân trên: 1; Thân dưới: 2; Bụng: 3)  </span>
+                        <input type="text" name= "Btreason" placeholder="Điền số tương ứng" id="Btreason" required>
+                     </div>
+                     <div class="inputbox">
+                        <span class="details">Link video hướng dẫn </span>
+                        <input type="text" name="Btvideo" id="Btvideo" placeholder="Link video hướng dẫn" required>
+                     </div>
+    
+                </div>
+                <div class="button">
+                    <input type="submit" value="Thêm Bài tập">
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="../js/admin.js"></script>
+</body>
+</html>

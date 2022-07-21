@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="../css/signup_style.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="title">Đăng kí</div>
+        <form action="/checkSignUp" method="post">
+            <div class="user_details">
+                <div class="inputbox">
+                    <span class="details">Họ và tên</span>
+                    <input type="text" name="fullname" placeholder="Nhập họ tên của bạn " id="fullname" required>
+                 </div>
+
+                 <div class="inputbox">
+                    <span class="details">Chiều cao (cm) </span>
+                    <input type="text" name="height" placeholder="Nhập chiều cao của bạn" id="height" required>
+                 </div>
+
+                 <div class="inputbox">
+                    <span class="details">Cân nặng (kg) </span>
+                    <input type="text" name= "weight" placeholder="Nhập cân nặng của bạn" id="weight" required>
+                 </div>
+                 <div class="inputbox">
+                    <span class="details">Email </span>
+                    <input type="text" name="email" id="email" placeholder="Email của bạn " required>
+                 </div>
+                 <div class="inputbox">
+                    <span class="details">Tuổi </span>
+                    <input type="number" name="age" id="age" placeholder="Độ tuổi của bạn " required>
+                 </div>
+
+                 <div class="inputbox">
+                    <span class="details">Giới tính (Nam: 1, Nữ :0) </span>
+                    <input type="number" min="0" max="1" name="gender" id="gender" placeholder="Giói tính của bạn " required>
+                 </div>
+
+                 <div class="inputbox">
+                    <span class="details">Số điện thoại </span>
+                    <input type="text" name="phone" id="phone" placeholder="Số điện thoại của bạn " required>
+                 </div>
+
+                 <div class="inputbox">
+                    <span class="details">Tên đăng nhập</span>
+                    <input type="text" name="username" id="username" placeholder="Nhập tên đăng nhập của bạn " required>
+                 </div>
+
+                 <div class="inputbox">
+                    <span class="details">Mật khẩu </span>
+                    <input type="password" name="password" id="password" placeholder="Nhập mật khẩu của bạn " required>
+                 </div>
+
+            </div>
+            <div class="button">
+                <input type="submit" value="Đăng kí tài khoản">
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

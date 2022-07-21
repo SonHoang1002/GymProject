@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap");
+* {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #000;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #f00;
+}
+
+body {
+  background-color: #000;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.container {
+  max-width: 700px;
+  width: 100%;
+  background: white;
+  padding: 25px 30px;
+  border-radius: 5px;
+}
+.container .title {
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.container .title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 85px;
+  background: #000;
+}
+
+.container form .user_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user_details .inputbox {
+  width: calc(100% / 2 -20px);
+  margin-bottom: 15px;
+}
+.user_details .inputbox .details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+  font-style: italic;
+}
+.user_details .inputbox input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+/* .user_details .inputbox input:focus,
+.user_details .inputbox input:valid {
+  border-color: #f00;
+} */
+form .training_details .training_titles {
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+}
+form .training_details .category {
+  display: flex;
+  width: 80%;
+  margin: 14px 0;
+  justify-content: space-between;
+
+}
+.training_details .category label {
+  display: flex;
+}
+
+.training_details .category .dot1, .dot2, .dot3, .dot4 {
+  height: 18px;
+  width: 18px;
+  background: #ababab;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 5px solid transparent;
+  cursor: pointer;
+}
+
+#dot1:checked ~ .category label .dot1,
+#dot2:checked ~ .category label .dot2,
+#dot3:checked ~ .category label .dot3,
+#dot4:checked ~ .category label .dot4 {
+  border-color: #ababab;
+  background: #2196fc;
+}
+
+/*gender*/
+form .gender_details .gender_titles {
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+}
+form .gender_details .category {
+  display: flex;
+  width: 80%;
+  margin: 14px 0;
+  justify-content: space-around;
+}
+.gender_details .category label {
+  display: flex;
+}
+
+.gender_details .category .dot1g, .dot2g {
+  height: 18px;
+  width: 18px;
+  background: #ababab;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 5px solid transparent;
+  cursor: pointer;
+}
+
+#dot1g:checked ~ .category label .dot1g,
+#dot2g:checked ~ .category label .dot2g {
+  border-color: #ababab;
+  background: #2196fc;
+}
+/*goals*/
+form .goals_details .goals_titles {
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+}
+form .goals_details .category {
+  display: flex;
+  width: 80%;
+  margin: 14px 0;
+  justify-content: space-around;
+}
+.goals_details .category label {
+  display: flex;
+}
+
+.goals_details .category .dot1goal, .dot2goal, .dot3goal {
+  height: 18px;
+  width: 18px;
+  background: #ababab;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 5px solid transparent;
+  cursor: pointer;
+}
+
+#dot1goal:checked ~ .category label .dot1goal,
+#dot2goal:checked ~ .category label .dot2goal,
+#dot3goal:checked ~ .category label .dot3goal {
+  border-color: #ababab;
+  background: #2196fc;
+}
+
+form input[type="radio"] {
+  display: none;
+}
+
+form button {
+  height: 45px;
+  margin: 45px 0;
+}
+form .button input {
+  height: 50px;
+  width: 100%;
+  outline: none;
+  color: white;
+  background: #f00;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+form .button input:hover {
+  background: linear-gradient(#f00 93%);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.05);
+}
+
+@media (max-width: 584px) {
+  .container {
+    max-width: 100%;
+  }
+  form .user_details .inputbox {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  form .gender_details .category {
+    display: flex;
+    width: 80%;
+    margin: 14px 0;
+    justify-content: space-around;
+  }
+  form .gender_details .category {
+    width: 100%;
+  }
+  .container form .user_details {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user_details::-webkit-scrollbar {
+    width: 0;
+  }
+}

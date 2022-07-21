@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chế độ dinh dưỡng</title>
+    <link rel="stylesheet" href="../css/nutrition.css">
+    <script src="https://kit.fontawesome.com/ed7ebbf6c6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/index" class="navbar-brand">WARRIOR HOUSE</a>
+            <div class="navbar-nav">
+                <a href="/index">Trở về trang chủ</a>
+            </div>
+        </div>
+    </nav>
+    <div class="bmr_container">
+        <div class="bmrbx">
+            <div class="bmr_info">
+                <h2>BMR là gì?</h2>
+                <p id="bmr_exp">
+                    BMR là từ viết tắt của Basal Metabolic Rate có nghĩa là tỉ lệ trao đổi chất cơ bản trong cơ thể con
+                    người. Chỉ số này cho ta biết mức năng lượng tối thiểu (calo) mà cơ thể bạn cần để đảm bảo duy trì
+                    các hoạt động bình thường. Ở trạng thái nghỉ ngơi kể cả khi đang ngủ, cũng như các hoạt động của các
+                    cơ quan hô hấp, tuần hoàn, hệ thống thần kinh và các bộ phận khác vẫn hoạt động để duy trì sự sống,
+                    tất cả các hoạt động của tim, não bộ, gan, thận,… đều tiêu tốn calories, tổng hợp tất cả các hoạt
+                    động cần thiết duy trì sự sống từ bên trong cơ thể (không tính vận động bên ngoài) đều được gọi
+                    chung là BMR.
+                </p>
+            </div>
+        </div>
+        <div class="caculatorbx">
+            <h2>BMR Calculator</h2>
+            <p class="text">Chiều cao của bạn là: (cm)</p>
+            <p id="height" required>
+                <%= user.height %>
+            </p>
+            <p class="text">Cân nặng của bạn là: (kg)</p>
+            <p id="weight" required>
+                <%= user.weight %>
+            </p>
+            <p class="text">Tuổi của bạn</p>
+            <p id="age" required>
+                <%= user.age %>
+            </p>
+            <p class="text">Giới tính của bạn: </p>
+            <% if(user.gender==1){ %>
+                <p id="gender" required>Nam</p>
+                <% }else { %>
+                    <p id="gender" required>Nữ</p>
+                    <% } %>
+                        <% if(user.gender==1){ %>
+                            <p id="result1" style="color: green;font-size: 25px;">Chỉ số BMR của bạn là: <%= (66 + (13.7
+                                    * user.weight) + (5 * user.height) - (6.8 * user.age)).toFixed(2) %>
+                            </p>
+                            <% }else { %>
+                                <p id="result1" style="color: green;font-size :25px;">Chỉ số BMR của bạn là: <%= (65 +
+                                        (9.6 * user.weight) + (1.8 * user.height) - (4.7 * user.age)).toFixed(2) %>
+                                </p>
+                                <% } %>
+
+        </div>
+    </div>
+
+    <section class="tdee_container">
+        <div class="tdeebx">
+            <div class="tdee_info">
+                <h2>TDEE là gì?</h2>
+                <p id="tdee_exp">
+                    TDEE (là viết tắt của Total Daily Energy Expenditure) là chỉ số calo cần thiết cho cơ thể trong 1
+                    ngày bao gồm tất cả hoạt động ăn chơi ngủ nghỉ mà bạn có trong ngày.
+                </p>
+            </div>
+        </div>
+
+        <div class="caculatorbx">
+            <h2>TDEE Calculator</h2>
+            <p class="text" id="bmr_result">Chỉ số BMR của bạn (calories): </p>
+            <input type="text" id="bmr" required>
+            <p>Lựa chọn tần suất vận động của bạn</p>
+            <div class="training_details">
+                <input type="radio" name="training" id="dot1">
+                <input type="radio" name="training" id="dot2">
+                <input type="radio" name="training" id="dot3">
+                <input type="radio" name="training" id="dot4">
+                <div class="category">
+                    <label for="dot1">
+                        <span class="dot1"></span>
+                        <span class="training">Ít vận động</span>
+                    </label>
+                    <label for="dot2">
+                        <span class="dot2"></span>
+                        <span class="training">2-3 buổi/tuần</span>
+                    </label>
+                    <label for="dot3">
+                        <span class="dot3"></span>
+                        <span class="training">4-5 buổi/tuần</span>
+                    </label>
+                    <label for="dot4">
+                        <span class="dot4"></span>
+                        <span class="training">2 buổi/ngày</span>
+                    </label>
+                </div>
+
+                <div class="goals_details">
+                    <input type="radio" name="goals" id="dot1goal">
+                    <input type="radio" name="goals" id="dot2goal">
+                    <input type="radio" name="goals" id="dot3goal">
+                    <div class="goals_titles">Mục đích tập luyện</div>
+                    <div class="category">
+                        <label for="dot1goal">
+                            <span class="dot1goal"></span>
+                            <span class="goals">Giảm cân</span>
+                        </label>
+                        <label for="dot2goal">
+                            <span class="dot2goal"></span>
+                            <span class="goals">Tăng cân</span>
+                        </label>
+                        <label for="dot3goal">
+                            <span class="dot3goal"></span>
+                            <span class="goals">Duy trì</span>
+                        </label>
+                    </div>
+                </div>
+
+                <form action="/detail" method="post">
+                    <input id="result2" name="tdee" >
+                    <button id="btn" onclick="TDEE()">KẾT QUẢ</button>
+                </form>
+                <!-- <form method="post" action="/handleNutrition">
+                    <input id="result2" name="TDEE" value="" readonly>
+                    <button id="btn" onclick="TDEE()">KẾT QUẢ</button>
+                </form> -->
+                <!-- <a href="/handleNutrition">KẾT QUẢ</a> -->
+            </div>
+
+        </div>
+    </section>
+    <footer>
+        <div class="footer_content">
+            <h3>WARRIOR HOUSE</h3>
+            <p>Thay đổi cơ thể bạn ở bất cứ đâu</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer_bottom">
+            <p>copyright &copy;2021 WARRIOR HOUSE. designed by <span>NguyenThanhTrung</span></p>
+        </div>
+    </footer>
+
+    <script>
+        // function BMR() {
+        //     var w = document.getElementById('weight').value;
+        //     var h = document.getElementById('height').value;
+        //     var a = document.getElementById('age').value;
+        //     if (document.getElementById('gender').value == "Nam") {
+        //         var bmr = 66 + (13.7 * w) + (5 * h) - (6.8 * a);
+        //         var bmro = (bmr.toFixed(2));
+        //         document.getElementById("result1").innerText = "Chỉ số BMR của bạn là: " + bmro + " calories";
+        //     }
+        //     if (document.getElementById('gender').value == "Nu") {
+        //         var bmr = 65 + (9.6 * weight) + (1.8 * height) - (4.7 * age);
+        //         var bmro = (bmr.toFixed(2));
+        //         document.getElementById("result1").innerText = "Chỉ số BMR của bạn là: " + bmro + " calories";
+        //     }
+        // }
+
+
+        function TDEE() {
+            var bmr = document.getElementById('bmr').value;
+            if (document.getElementById('dot1').checked == true) {
+                var tdee = bmr * 1.2;
+                var tdeeo = (tdee.toFixed(2));
+            }
+            if (document.getElementById('dot2').checked == true) {
+                var tdee = bmr * 1.4;
+                var tdeeo = (tdee.toFixed(2));
+            }
+            if (document.getElementById('dot3').checked == true) {
+                var tdee = bmr * 1.6;
+                var tdeeo = (tdee.toFixed(2));
+            }
+            if (document.getElementById('dot4').checked == true) {
+                var tdee = bmr * 1.75;
+                var tdeeo = (tdee.toFixed(2));
+            }
+            if (document.getElementById('dot1goal').checked == true) {
+                var result = tdeeo - 150;
+                document.getElementById('result2').value = result;
+            }
+            if (document.getElementById('dot2goal').checked == true) {
+                var result = tdeeo;
+                document.getElementById('result2').value = result;
+            }
+            if (document.getElementById('dot3goal').checked == true) {
+                var result = parseInt(tdeeo) + 150;
+                document.getElementById('result2').value =  result ;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

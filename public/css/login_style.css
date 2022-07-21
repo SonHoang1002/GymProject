@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap");
+* {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #000;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #f00;
+}
+/* @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+} */
+body {
+  background-color: #000;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+section .imgbx {
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+section .imgbx::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: linear-gradient(225deg, #ab2727, #ab2727); */
+
+  z-index: 1;
+  mix-blend-mode: screen;
+}
+section .imgbx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section .ctbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+section .ctbox .formbx {
+  width: 50%;
+}
+section .ctbox .formbx h2 {
+  color: #607d8b;
+  font-weight: 600;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  border-bottom: 4px solid #f00;
+  display: inline-block;
+  letter-spacing: 1px;
+}
+section .ctbox .formbx .inputbx {
+  margin-bottom: 20px;
+}
+section .ctbox .formbx .inputbx span {
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: inline-block;
+  color: #ffffff;
+  font-weight: 16px;
+  letter-spacing: 1px;
+}
+section .ctbox .formbx .inputbx input {
+  width: 100%;
+  padding: 10px 20px;
+  outline: none;
+  font-weight: 400;
+  border: 1px solid #ffffff;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  background: transparent;
+  border-radius: 20px;
+}
+section .ctbox .formbx .inputbx input[type="submit"] {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    padding-right: 3rem;
+    border: 1px solid #000;
+    background: #f00;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+section .ctbox .formbx .inputbx input[type="submit"]:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.remember .check{
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+section .ctbox .formbx .inputbx p {
+  font-size: large;
+  color: #ffffff;
+}
+section .ctbox .formbx .inputbx p a {
+  color: #f00;
+}
+@media (max-width: 768px) {
+  section .imgbx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  section .ctbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  section .ctbox .formbx {
+    width: 100%;
+    padding: 40px;
+    background: white;
+    margin: 50px;
+  }
+}

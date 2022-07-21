@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internmediate</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+    <!-- header section starts      -->
+
+    <header class="header">
+
+        <a href="#" class="logo"> <span>WARRIOR</span>HOUSE </a>
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="/index">trang chủ</a>
+            <a href="/index">thông tin</a>
+            <a href="/index">chế độ dinh dưỡng</a>
+            <a href="/index">Kế hoạch</a>
+            <a href="/index">huấn luyện viên</a>
+            <a href="/login">đăng xuất</a>
+        </nav>
+
+    </header>
+
+    <!-- header section ends     --> 
+
+    <!-- home section starts  -->
+    <section class="home" id="home">
+
+        <div class="swiper home-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide slide" style="background: url(images/home-bg-3.jpg) no-repeat;">
+                    <div class="content">
+                        <span>MEDIUM LEVEL</span>
+                        <h3>Bắt đầu khóa tập dành cho người đã có ít kinh nghiệm luyện tập</h3>
+                        <a href="#about" class="btn">Bắt đầu nào !!!</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <!-- home section ends -->
+        
+
+
+    <section>
+        <div class="grid">
+            <% data1.forEach((i)=>{ %>
+              <div class="grid-item">
+                <div class="card">
+                  <!-- <img class="card-img" src="./images/maldives.jpg" alt="Maldives" /> -->
+                  <div class="card-content">
+                    <h1 class="card-header" style="color: red;"> Rèn luyện thân trên</h1>
+                     <h2 class="card-header" style="font-style: italic;"> <%= i.Btname %></h2>
+                    <a href="<%= i.Btvideo %>" target="blank"><button class="card-btn">Visit Instruction Video <span>&rarr;</span></button></a>
+                  </div>
+                </div>
+              </div>
+            <% }) %>
+        </div>
+        <div class="grid">
+            <% data2.forEach((i)=>{ %>
+              <div class="grid-item">
+                <div class="card">
+                  <!-- <img class="card-img" src="./images/maldives.jpg" alt="Maldives" /> -->
+                  <div class="card-content">
+                    <h1 class="card-header" style="color: red;"> Rèn luyện thân dưới</h1>
+                     <h2 class="card-header" style="font-style: italic;"> <%= i.Btname %></h2>
+                    <a href="<%= i.Btvideo %>" target="blank"><button class="card-btn">Visit Instruction Video <span>&rarr;</span></button></a>
+                  </div>
+                </div>
+              </div>
+            <% }) %>
+        </div>
+        <div class="grid">
+            <% data3.forEach((i)=>{ %>
+              <div class="grid-item">
+                <div class="card">
+                  <!-- <img class="card-img" src="./images/maldives.jpg" alt="Maldives" /> -->
+                  <div class="card-content">
+                    <h1 class="card-header" style="color: red;"> Rèn luyện cơ bụng</h1>
+                     <h2 class="card-header" style="font-style: italic;"> <%= i.Btname %></h2>
+                    <a href="<%= i.Btvideo %>" target="blank"><button class="card-btn">Visit Instruction Video <span>&rarr;</span></button></a>
+                  </div>
+                </div>
+              </div>
+            <% }) %>
+        </div>
+    </section>
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a class="links" href="#home">trang chủ</a>
+                <a class="links" href="#about">thông tin</a>
+                <a class="links" href="#nutritions">Chế độ dinh dưỡng</a>
+                <a class="links" href="#pricing">kế hoạch</a>
+                <a class="links" href="#trainers">Huấn luyện viên</a>
+            </div>
+
+            <div class="box">
+                <h3>Thời gian tập luyện với HLV</h3>
+                <p> Thứ 2 : <i> 7:00am - 10:30pm </i> </p>
+                <p> Thứ 3 : <i> 7:00am - 10:30pm </i> </p>
+                <p> Thứ 4 : <i> 7:00am - 10:30pm </i> </p>
+                <p> Thứ 5 : <i> 7:00am - 10:30pm </i> </p>
+                <p> Thứ 6 : <i> 7:00am - 10:30pm </i> </p>
+                <p> Thứ 7, Chủ Nhật : <i> 9:00 am - 9:00 Pm </i> </p>
+            </div>
+
+            <div class="box">
+                <h3>Thông tin liên hệ</h3>
+                <p> <i class="fas fa-phone"></i> +84 929679962 </p>
+                <p> <i class="fas fa-phone"></i> +84 942068576 </p>
+                <p> <i class="fas fa-envelope"></i> WarriorHouse@gmail.com </p>
+                <p> <i class="fas fa-map"></i> Hà Nội, Việt Nam</p>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                    <a href="#" class="fab fa-pinterest"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>newsletter</h3>
+                <p>Đăng ký để nhận được email về các thông tin mới nhất</p>
+                <form action="">
+                    <input type="email" name="" class="email" placeholder="enter your email" id="">
+                    <input type="submit" value="Đăng Ký" class="btn">
+                </form>
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="credit"> created by <span>Nhóm Công nghệ web</span>
+
+        <!-- footer section ends -->
+
+    
+</body>
+</html>

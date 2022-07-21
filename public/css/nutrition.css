@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  background-image: url("../images/nutrition.jpg");
+  background-size: cover;
+}
+/*thanh nav*/
+.navbar {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1.2rem;
+}
+.navbar-brand {
+  color: crimson;
+  font-size: 2rem;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.navbar-nav {
+  padding: 0.8rem 0 0.2rem 0;
+  text-align: center;
+}
+.navbar-nav a {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.4rem 0.1rem;
+  letter-spacing: 3px;
+  transition: opacity 0.5s ease;
+}
+.navbar-nav a:hover {
+  opacity: 0.7;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* BMR* text*/
+.bmr_container {
+  display: flex;
+  justify-content: space-around;
+}
+.bmrbx {
+  background-color: transparent;
+  margin-left: 5%;
+  padding: 5px;
+  color: #fff;
+  width: 500px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-shadow: black 5px 5px 5px;
+}
+/*tdee text*/
+.tdee_container {
+  display: flex;
+  justify-content: space-around;
+}
+.tdeebx {
+  margin-top: 30px;
+  background-color: transparent;
+  margin-left: 5%;
+  padding: 5px;
+  color: #fff;
+  width: 500px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-shadow: black 5px 5px 5px;
+}
+/* caculator layout*/
+.caculatorbx {
+  margin-bottom: 10px;
+  width: 500px;
+  display: inline-block;
+  background-color: white;
+  border-radius: 20px;
+}
+.caculatorbx h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.caculatorbx p {
+  text-align: left;
+  padding-left: 120px;
+}
+#weight,
+#height,
+#age,
+#gender{
+  
+  width: 250px;
+  color: #222f3e;
+  text-align: center;
+  font-size: 20px;
+  color: crimson;
+}
+#bmr {
+  width: 250px;
+  color: #222f3e;
+  text-align: center;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  background: none;
+  border-bottom: 1px crimson solid;
+}
+
+/* Danh sach cuong do tap*/
+.training_details .category {
+  display: flex;
+  padding: 5px 5px 5px 5px;
+}
+
+.training_details .category label {
+  display: flex;
+  justify-content: space-around;
+  margin-right: 6px;
+}
+
+.training_details .category .dot1 {
+  height: 10px;
+  width: 10px;
+  background: #ababab;
+  border-radius: 50%;
+  border: 5px solid transparent;
+}
+.training_details .category .dot2 {
+  height: 10px;
+  width: 10px;
+  background: #ababab;
+  border-radius: 50%;
+  margin-right: 5px;
+  border: 5px solid transparent;
+}
+.training_details .category .dot3 {
+  height: 10px;
+  width: 10px;
+  background: #ababab;
+  border-radius: 50%;
+  margin-right: 5px;
+  border: 5px solid transparent;
+}
+.training_details .category .dot4 {
+  height: 10px;
+  width: 10px;
+  background: #ababab;
+  border-radius: 50%;
+  margin-right: 5px;
+  border: 5px solid transparent;
+}
+#dot1:checked ~ .category label .dot1,
+#dot2:checked ~ .category label .dot2,
+#dot3:checked ~ .category label .dot3,
+#dot4:checked ~ .category label .dot4 {
+  border-color: #ababab;
+  background: #400606;
+}
+.training_details input[type="radio"] {
+  display: none;
+}
+
+/* danh sach muc tieu tap*/
+.goals_details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+.goals_details .category {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 5px 5px 5px;
+}
+.goals_details .category label {
+  margin-right: 40px;
+}
+
+.goals_details .category .dot1goal {
+  height: 10px;
+  width: 10px;
+  background: #ababab;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  margin-right: 5px;
+}
+.goals_details .category .dot2goal {
+  height: 10px;
+  width: 10px;
+  background: #ababab;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  margin-right: 5px;
+}
+.goals_details .category .dot3goal {
+  height: 10px;
+  width: 10px;
+  background: #ababab;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  margin-right: 5px;
+}
+
+#dot1goal:checked ~ .category label .dot1goal,
+#dot2goal:checked ~ .category label .dot2goal,
+#dot3goal:checked ~ .category label .dot3goal {
+  border-color: #ababab;
+  background: #400606;
+}
+/*nut tra ket qua*/
+#btn {
+  font-size: 1rem;
+  margin-top: 10px;
+  border-radius: 30px;
+  background: #fff;
+  color: black;
+  width: 150px;
+  padding: 15px;
+  margin-bottom: 3px;
+  outline: none;
+  cursor: pointer;
+}
+#btn:hover {
+  box-shadow: 1px 1px 10px #400606;
+}
+#result1 {
+  color: crimson;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+#result2 {
+  color: crimson;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+/* footer */
+footer {
+  background: #111;
+  height: auto;
+  width: 100vw;
+  padding-top: 40px;
+  color: #fff;
+}
+.footer_content {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.footer_content h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 2rem;
+}
+.footer_content p {
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 15px;
+}
+.socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+.socials li {
+  margin: 0 10px;
+}
+.socials a {
+  text-decoration: none;
+  color: #fff;
+}
+.socials a i {
+  font-size: 3rem;
+  transition: color 0.4s ease;
+}
+.socials a:hover i {
+  color: crimson;
+}
+.footer_bottom {
+  background: #000;
+  width: 100vw;
+  padding: 20px 0;
+  text-align: center;
+}
+.footer_bottom p {
+  font-size: 15px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+.footer_bottom span {
+  text-transform: uppercase;
+  opacity: 0.4;
+  font-weight: 200;
+}
+
+@media screen and (min-width: 540px) {
+  .navbar-nav a {
+    padding-right: 1.2rem;
+    padding-left: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 800px) {
+  .bmr_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .tdee_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
